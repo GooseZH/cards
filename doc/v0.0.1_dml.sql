@@ -1,0 +1,3 @@
+insert into tbl_user(`username`,`password`,`phone`,`turename`,`nickname`,`email`,`role`,`status`,`is_delete`,`create_time`,`create_by`,`update_time`,`update_by`) values ('admin','123456','','心中有束光','TheBest','',1,0,0,'2016-11-25 02:26:46','SYSTEM','2016-11-25 02:26:46','SYSTEM');
+insert into tbl_user(`username`,`password`,`phone`,`turename`,`nickname`,`email`,`role`,`status`,`is_delete`,`create_time`,`create_by`,`update_time`,`update_by`) values ('business','123456','','心中有束光','TheBest','',2,0,0,'2016-11-25 02:26:46','SYSTEM','2016-11-25 02:26:46','SYSTEM');
+update tbl_user set `role`=3 where `username`='admin';
