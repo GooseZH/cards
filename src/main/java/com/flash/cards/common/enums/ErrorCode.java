@@ -16,7 +16,14 @@ public enum ErrorCode {
     USER_PASSWORD_ERROR (1002,  "密码错误"),
     UN_LOGIN (1003,  "未登录"),
     USER_NOT_FOUND  (1004,  "用户未找到"),
-    USER_STATUS_ERROR   (1005,  "用户状态异常");
+    USER_STATUS_ERROR   (1005,  "用户状态异常"),
+    BEAN_SAVE_ERROR (1006, "实体保存失败"),
+
+    /**
+     * 店铺处理
+     */
+    STORE_NOT_EXIST (2001, "店铺不存在")
+    ;
 
     private Integer code;
     private String msg;

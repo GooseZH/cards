@@ -34,6 +34,11 @@ public class LoginFilter implements Filter {
         //1.过滤URL
         HttpServletRequest req = (HttpServletRequest) servletRequest;
         HttpServletResponse res = (HttpServletResponse) servletResponse;
+        // TODO 权限校验 日志框架
+        if (req.getServletPath().equals("/login/login") || req.getServletPath().equals("/user/info")) {
+            filterChain.doFilter(req, res);
+            return;
+        }
         String requestMethod = req.getMethod();
         if (!"OPTIONS".equals(requestMethod)) {
             String cookieSessionId = req.getHeader(Conf.STR.TOKEN);

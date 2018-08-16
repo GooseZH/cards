@@ -23,6 +23,7 @@ public class User extends BaseEntity4Date {
     private String email; // 邮箱
     @Convert(converter = UserRoleEnum.Convert.class)
     private UserRoleEnum role; //角色
+    @Convert(converter = UserStatuEnum.Convert.class)
     private UserStatuEnum status;
 
     public String getUsername() {

@@ -34,7 +34,7 @@ public abstract class AbstractQueryService<T extends BaseDao<E, ID>, E extends B
      * @return
      */
     public E findOneById(ID id) {
-        return findOneById(id);
+        return dao.findById(id).get();
     }
 
     /**
